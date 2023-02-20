@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --bg-primary: #117050;
+    --bg-second: #454545;
+    --white-color: #ffffff;
+    --bg-footer: #333;
+    --second-50: #999999;
+    --second-20: #e8e9ee;
+    --bg-transparent: transparent;
+    --vh: 100vh;
+    --vh-100: 100px;
+}
+
 body{
     width: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -11,7 +23,7 @@ body{
 
 header .line{
     width: 100%;
-    background-color: #117050;
+    background-color: var(--bg-primary);
     height: 15px;
 }
 
@@ -42,21 +54,21 @@ p{
 
 .button{
     display: inline-block;
-    border: 2px solid #454545;
+    border: 2px solid var(--bg-second);
     padding: 10px 30px;
     border-radius: 4px;
-    color: #454545;
+    color: var(--bg-second);
     text-decoration: none;
     transition: all .2s ease;
 }
 
 .button:hover{
-    background-color: #454545;
-    color: #ffffff;
+    background-color: var(--bg-second);
+    color: var(--white-color);
 }
 
 .bar{
-    background-color: #117050;
+    background-color: var(--bg-primary);
     width: 168px;
     height: 22px;
 }
@@ -68,7 +80,7 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: var(--vh-100);
 }
 
 .header-left img{
@@ -93,7 +105,7 @@ p{
 .header-search {
     font-size: 22px;
     padding: 10px 15px;
-    border: 1px solid #999999;
+    border: 1px solid var(--second-50);
     border-radius: 4px;
     outline: 0;
     width: 100%;
@@ -102,7 +114,7 @@ p{
 
 .header-search button{
     border: 0;
-    background-color: transparent;
+    background-color: var(--bg-transparent);
 }
 
 .header-search button img{
@@ -121,7 +133,7 @@ p{
 
 /* --- Banner --- */
 .banner{
-    height: 100vh;
+    height: var(--vh);
     display: flex;
     align-items: center;
     background-image: url('../img/bg.jpg');
@@ -137,7 +149,7 @@ p{
 .banner-images img{
     width: 160px;
     height: auto;
-    border: 6px solid #117050;
+    border: 6px solid var(--bg-primary);
     border-radius: 50%;
     margin-right: 40px;
 }
@@ -217,7 +229,7 @@ p{
 .area4{
     display: grid;
     grid-template-columns: 450px 1fr;
-    background-color: #e8e9ee;
+    background-color: var(--second-20);
 }
 
 .area4-content{
@@ -233,10 +245,10 @@ p{
 footer{
     display: grid;
     grid-template-rows: 1fr;
-    height: 100vh;
+    height: var(--vh);
 }
 footer .img{
-    height: calc(100vh - 100px);
+    height: calc(var(--vh) - var(--vh-100));
     background-image: url('../img/bg4.jpg');
     background-size: cover;
     background-position: bottom;
@@ -244,9 +256,9 @@ footer .img{
 
 footer .desc{
     text-align: center;
-    background-color: #333;
-    color: #ffffff;
-    height: 100px;
+    background-color: var(--bg-footer);
+    color: var(--white-color);
+    height: var(--vh-100);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,7 +337,7 @@ footer p{
         justify-content: center;
         width: 90px;
         height: auto;
-        border: 3px solid #117050;
+        border: 3px solid var(--bg-primary);
         border-radius: 50%;
         margin-left: 8px;
         margin-right: 8px;
@@ -371,7 +383,7 @@ footer p{
         justify-content: center;
         width: 65px;
         height: auto;
-        border: 3px solid #117050;
+        border: 3px solid var(--bg-primary);
         border-radius: 50%;
         margin-left: 4px;
         margin-right: 4px;
